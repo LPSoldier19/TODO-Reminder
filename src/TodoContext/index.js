@@ -12,6 +12,7 @@ function TodoProvider(props){
     } =  useLocalStorage('TODOS_V1', []);
     // const [todos, saveTodos] = useLocalStorage('TODOS_V1', []);
     const [searchValue, setSearchValue] = React.useState('');
+    const [openModal, setOpenModal] = React.useState(false);
 
     todos.sort((a,b)=> Number(a.completed) - Number(b.completed));
 
@@ -50,6 +51,15 @@ function TodoProvider(props){
       newTodos.splice(todoIndex, 1);
       saveTodos(newTodos);
     }
+
+    const addTodo = (text) => {
+      const newTodos = [...todos];
+      newTodos.push({
+        text,
+        completed:false
+      });
+      saveTodos(newTodos);
+    }
     
     return(
     <TodoContext.Provider value={{
@@ -62,6 +72,9 @@ function TodoProvider(props){
         searchedTodos,
         completeTodos,
         deleteTodo,
+        addTodo,
+        openModal,
+        setOpenModal
     }}>
         {props.children}
     </TodoContext.Provider>);
