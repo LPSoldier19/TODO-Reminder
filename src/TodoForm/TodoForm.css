@@ -73,3 +73,14 @@ textarea:focus{
 .TodoForm-button--cancel{
     background: transparent;
 }
+
+.TodoForm-dateInput{
+    margin-bottom: 25px;
+    width: 80%;
+    height: 28px;
+    border-radius: 10px;
+    border: solid 1px black;
+    text-align: center;
+    padding: 4px;
+    font-family: 'Montserrat';
+}

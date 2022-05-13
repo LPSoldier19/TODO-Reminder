@@ -12,7 +12,8 @@ function TodoItem(props) {
         <FontAwesomeIcon icon={faCheck}/>
       </span>
       <p className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
-        {props.text}
+        {props.text}<br></br>
+        Date: {props.date}
       </p>
       <span className="Icon Icon-delete"
       onClick={props.onDelete}>

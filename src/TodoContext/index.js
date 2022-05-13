@@ -52,11 +52,12 @@ function TodoProvider(props){
       saveTodos(newTodos);
     }
 
-    const addTodo = (text) => {
+    const addTodo = (text,date) => {
       const newTodos = [...todos];
       newTodos.push({
         text,
-        completed:false
+        completed:false,
+        date
       });
       saveTodos(newTodos);
     }

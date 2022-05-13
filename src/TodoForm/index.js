@@ -5,6 +5,7 @@ import './TodoForm.css';
 function TodoForm(){
 
     const [newTodoValue, setNewTodoValue] = React.useState('');
+    const [newTodoDateValue, setNewTodoDateValue] = React.useState('');
     const {openModal, setOpenModal} = React.useContext(TodoContext);
 
     const {
@@ -17,11 +18,16 @@ function TodoForm(){
 
     const onChange = (event) =>{
         setNewTodoValue(event.target.value);
+        
+    }
+
+    const onChangeDate = (event) =>{
+        setNewTodoDateValue(event.target.value);
     }
 
     const onSubmit = (event) => {
         event.preventDefault();
-        addTodo(newTodoValue);
+        addTodo(newTodoValue, newTodoDateValue);
         setOpenModal(false);
     }
 
@@ -33,6 +39,11 @@ function TodoForm(){
                 value={newTodoValue}
                 onChange={onChange}
                 placeholder="Cortar la cebolla para el almuerzo"
+            />
+            <input type="date" 
+            value={newTodoDateValue}
+            onChange={onChangeDate}
+            className="TodoForm-dateInput"
             />
             <div className="TodoForm-buttonContainer">
                 <button
