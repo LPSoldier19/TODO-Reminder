@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/TODO-Reminder/static/css/main.81476457.css",
+    "main.js": "/TODO-Reminder/static/js/main.37690bb0.js",
+    "index.html": "/TODO-Reminder/index.html",
+    "main.81476457.css.map": "/TODO-Reminder/static/css/main.81476457.css.map",
+    "main.37690bb0.js.map": "/TODO-Reminder/static/js/main.37690bb0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.81476457.css",
+    "static/js/main.37690bb0.js"
+  ]
+}
